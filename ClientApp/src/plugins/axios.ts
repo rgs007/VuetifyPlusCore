@@ -11,7 +11,7 @@ import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 const config = {
   // baseURL: process.env.baseURL || process.env.apiUrl || ""
   // timeout: 60 * 1000, // Timeout
-  // withCredentials: true, // Check cross-site Access-Control
+  withCredentials: true, // Check cross-site Access-Control
 };
 
 // tslint:disable-next-line: variable-name

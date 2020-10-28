@@ -7,7 +7,7 @@ Vue.use(Router);
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
+  routes : [
     {
       path: '/',
       name: 'home',
@@ -25,6 +25,16 @@ export default new Router({
       path: '/fetch-data',
       name: 'fetch-data',
       component: () => import(/* webpackChunkName: "fetch-data" */ './views/FetchData.vue'),
-    },
+      },
+      {
+          path: '/checkauth',
+          name: 'checkauth',
+          component: () => import(/* webpackChunkName: "fetch-data" */ './views/CheckAuth.vue'),
+      },
+      {
+          path: '/login',
+          name: 'login',
+          component: () => import(/* webpackChunkName: "fetch-data" */ './views/Login.vue'),
+      },
   ],
 });

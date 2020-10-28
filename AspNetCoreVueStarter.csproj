@@ -19,7 +19,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="flurl" Version="2.8.2" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.8" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
     <PackageReference Include="VueCliMiddleware" Version="3.1.1" />
   </ItemGroup>
 
@@ -31,6 +33,10 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\plugins\axios.ts" />
+    <None Remove="ClientApp\src\services\auth.header.ts" />
+    <None Remove="ClientApp\src\services\auth.service.ts" />
+    <None Remove="ClientApp\src\services\user.service.ts" />
+    <None Remove="ClientApp\src\store\auth.module.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,6 +49,10 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\plugins\axios.ts" />
+    <TypeScriptCompile Include="ClientApp\src\services\auth.header.ts" />
+    <TypeScriptCompile Include="ClientApp\src\services\auth.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\services\user.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\store\auth.module.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
